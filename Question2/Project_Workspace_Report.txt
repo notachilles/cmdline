@@ -1,0 +1,40 @@
+Directory Structure
+
+secure/
+├── docs/
+├── code/
+└── logs/
+
+Command ls -lR secure (file permissions before modification)
+Output
+    secure:
+    total 8
+    drwxr-xr-x 2 jiyajale jiyajale 4096 Jun 21 12:26 docs
+    drwxr-xr-x 2 jiyajale jiyajale 4096 Jun 21 11:58 logs
+
+    secure/docs:
+    total 0
+    -rw-r--r-- 1 jiyajale jiyajale 0 Jun 21 12:26 test.txt
+
+    secure/logs:
+    total 0
+
+Command ls -lR secure (file permissions after modification)
+    secure:
+    total 8
+    drwxr-x--- 2 jiyajale jiyajale 4096 Jun 21 12:26 docs
+    drwx------ 2 jiyajale jiyajale 4096 Jun 21 11:58 logs
+
+    secure/docs:
+    total 0
+    -rw-r--r-- 1 jiyajale jiyajale 0 Jun 21 12:26 test.txt (Only owner can edit, rest can only read)
+
+    secure/logs:
+    total 0
+
+Command umask - displays the default file creation mask.
+    It dictates the default permissions automatically assigned to any new files that are created.
+    Output - 0022
+
+Explanation - Files stored in the secure/docs directory cannot be modified by anyone except the owner of the system.
+    Thus, files can retain their integrity.

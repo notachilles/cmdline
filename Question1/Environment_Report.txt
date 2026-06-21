@@ -1,0 +1,26 @@
+Command whoami - shows the current logged-in username.
+Output - jiyajale
+
+Command id - Shows user ID and groups associated with the account.
+Output - uid=1000(jiyajale) gid=1000(jiyajale) groups=1000(jiyajale),4(adm),24(cdrom),27(sudo),30(dip),46(plugdev),100(users)
+
+Command echo $SHELL - shows current shell being used
+Output - /bin/bash
+
+Command pwd - shows current working directory
+Output - /home/jiyajale/cmdline/Question1
+
+Command ls - shows files and directories in workspace
+Output - Environment_Report.txt
+
+Command ping -c 5 google.com - shows Network connectivity verification result
+Output - PING google.com (142.250.143.102) 56(84) bytes of data.
+        64 bytes from pt-in-f102.1e100.net (142.250.143.102): icmp_seq=1 ttl=107 time=165 ms
+        64 bytes from pt-in-f102.1e100.net (142.250.143.102): icmp_seq=2 ttl=107 time=76.0 ms
+        64 bytes from pt-in-f102.1e100.net (142.250.143.102): icmp_seq=3 ttl=107 time=129 ms
+        64 bytes from pt-in-f102.1e100.net (142.250.143.102): icmp_seq=4 ttl=107 time=101 ms
+        64 bytes from pt-in-f102.1e100.net (142.250.143.102): icmp_seq=5 ttl=107 time=154 ms
+
+        --- google.com ping statistics ---
+        5 packets transmitted, 5 received, 0% packet loss, time 3998ms
+        rtt min/avg/max/mdev = 76.036/124.747/164.670/32.884 ms

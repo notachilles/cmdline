@@ -1,0 +1,24 @@
+> Upon creating a hard link and a symbolic link and running the ls -li command to see the files with the inodes,
+we get the following output
+
+total 8
+51141 -rw-r--r-- 1 jiyajale jiyajale  0 Jun 21 13:36 Link_Analysis_Report.txt
+51142 -rw-r--r-- 2 jiyajale jiyajale 10 Jun 21 13:37 hard_link.txt
+51142 -rw-r--r-- 2 jiyajale jiyajale 10 Jun 21 13:37 original.txt
+51143 lrwxrwxrwx 1 jiyajale jiyajale 12 Jun 21 13:38 sym_link.txt -> original.txt 
+
+> After deleting the original file we get the followig output
+
+total 4
+51141 -rw-r--r-- 1 jiyajale jiyajale  0 Jun 21 13:36 Link_Analysis_Report.txt
+51142 -rw-r--r-- 1 jiyajale jiyajale 10 Jun 21 13:37 hard_link.txt
+51143 lrwxrwxrwx 1 jiyajale jiyajale 12 Jun 21 13:38 sym_link.txt -> original.txt
+
+jiyajale@LAPTOP-FPLPQ1FI:~/cmdline/Question3$ cat hard_link.txt
+Test Data
+jiyajale@LAPTOP-FPLPQ1FI:~/cmdline/Question3$ cat sym_link.txt
+cat: sym_link.txt: No such file or directory
+
+Explanation - Deleting the original file breaks the symbolic link (causing an error),
+              but the hard link still successfully displays the data because the underlying inode remains intact.
+              The commands to create the hard link and symbolic link are there in the screenshot.

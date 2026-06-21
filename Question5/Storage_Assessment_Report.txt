@@ -1,0 +1,7 @@
+REPORT PREPARED USING VIM
+COMMANDS USED
+lsblk
+df -h
+df -uh
+df -i (to show inode utilisation)
+sudo smartctl -a -T permissive /dev/sda (to monitor storage health)
